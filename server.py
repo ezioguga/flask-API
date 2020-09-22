@@ -3,10 +3,12 @@ import joblib;
 import pandas as pd
 import numpy as np
 from sklearn import *
+from flask_cors import CORS
 # from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 app = Flask(__name__)
+CORS(app)
 @app.route('/predict', methods=['POST'])
 def predict():
      # vectorizer = TfidfVectorizer()
